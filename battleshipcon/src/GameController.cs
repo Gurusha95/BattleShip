@@ -3,7 +3,7 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
 
@@ -12,7 +12,7 @@ using SwinGameSDK;
 /// managing user input, and displaying the current state of the
 /// game.
 /// </summary>
-public static class GameController
+public class GameController
 {
 
 	private static BattleShipsGame _theGame;
