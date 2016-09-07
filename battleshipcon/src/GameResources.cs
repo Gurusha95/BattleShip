@@ -10,6 +10,9 @@ using SwinGameSDK;
 public static class GameResources
 {
 
+	/// <summary>
+	/// Loads and Stores The new Fonts 
+	/// </summary>
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
@@ -17,7 +20,10 @@ public static class GameResources
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf", 8);
 	}
-
+	
+	/// <summary>
+	/// Loads and Stores Images for Menus and Backgrounds
+	/// </summary>
 	private static void LoadImages()
 	{
 		//Backgrounds
@@ -44,7 +50,9 @@ public static class GameResources
 		NewImage("Splash", "splash.png");
 
 	}
-
+	/// <summary>
+	/// Loads and Stores Sounds files
+	/// </summary>
 	private static void LoadSounds()
 	{
 		NewSound("Error", "error.wav");
@@ -55,7 +63,10 @@ public static class GameResources
 		NewSound("Winner", "winner.wav");
 		NewSound("Lose", "lose.wav");
 	}
-
+	
+	/// <summary>
+	/// Loads and stores music track
+	/// </summary>
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "horrordrone.mp3");
@@ -156,6 +167,9 @@ public static class GameResources
 		EndLoadingScreen(width, height);
 	}
 
+	/// <summary>
+	/// Displays SwinGame Loading Screen
+	/// </summary>
 	private static void ShowLoadingScreen()
 	{
 		_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
@@ -173,6 +187,9 @@ public static class GameResources
 		PlaySwinGameIntro();
 	}
 
+	/// <summary>
+	/// Plays Animation for SwinGame Intro
+	/// </summary>
 	private static void PlaySwinGameIntro()
 	{
 		const int ANI_X = 143;
@@ -197,7 +214,10 @@ public static class GameResources
 		SwinGame.Delay(1500);
 
 	}
-
+	
+	/// <summary>
+	/// Displays Message during Loading Screen
+	/// </summary>
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -220,6 +240,9 @@ public static class GameResources
 		SwinGame.ProcessEvents();
 	}
 
+	/// <summary>
+	/// Closing Game Down and Freeing all Resources used
+	/// </summary>
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();
@@ -297,6 +320,9 @@ public static class GameResources
 		}
 	}
 
+	/// <summary>
+	/// Removing Reosurces from use by freeing them
+	/// </summary>
 	public static void FreeResources()
 	{
 		FreeFonts();

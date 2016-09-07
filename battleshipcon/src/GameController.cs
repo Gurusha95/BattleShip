@@ -51,6 +51,9 @@ public class GameController
 		get { return _ai; }
 	}
 
+	/// <summary>
+	/// Creates GameController
+	/// </summary>
 	public GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -119,6 +122,10 @@ public class GameController
 		SwinGame.RefreshScreen();
 	}
 
+	/// <summary>
+	/// Shows Animation of Hit Sequence by Adding Explosion
+	/// Then playing Sound Effect to go with Explosion
+	/// </summary>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -129,7 +136,10 @@ public class GameController
 
 		DrawAnimationSequence();
 	}
-
+	/// <summary>
+	/// Shows Animation of Miss Sequence by Adding Miss Animation
+	/// Then playing Splash Sound Effect
+	/// </summary>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

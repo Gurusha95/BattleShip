@@ -66,21 +66,34 @@ public class Ship
 		get { return _row; }
 	}
 
+	/// <summary>
+	/// The column location of the ship
+	/// </summary>
+	/// <value>The topmost location of the ship</value>
+	/// <returns>the column of the ship</returns>
 	public int Column {
 		get { return _col; }
 	}
 
+	/// <summary>
+	/// The Direction the ship is facing
+	/// </summary>
+	/// <value>The orientation the ship is facing</value>
+	/// <returns>the orientation of the ship</returns>
 	public Direction Direction {
 		get { return _direction; }
 	}
 
+	/// <summary>
+	/// Constructor Assigning Ship, Tiles and Ship sizes
+	/// </summary>
 	public Ship(ShipName ship)
 	{
 		_shipName = ship;
 		_tiles = new List<Tile>();
 
 		//gets the ship size from the enumarator
-		_sizeOfShip = _shipName;
+		_sizeOfShip = (int) _shipName;
 	}
 
 	/// <summary>
@@ -103,6 +116,9 @@ public class Ship
 		_tiles.Clear();
 	}
 
+	/// <summary>
+	/// Adds a Hit to the _hitsTaken Count
+	/// </summary>
 	public void Hit()
 	{
 		_hitsTaken = _hitsTaken + 1;
@@ -116,6 +132,10 @@ public class Ship
 		get { return _tiles.Count > 0; }
 	}
 
+	/// <summary>
+	/// Checks to see if the ship has been destroyed
+	/// </summary>
+	/// <returns>True or False if Ship is Destroyed</returns>
 	public bool IsDestroyed {
 		get { return Hits == Size; }
 	}
