@@ -169,9 +169,9 @@ public class GameController
 		isHuman = object.ReferenceEquals(_theGame.Player, HumanPlayer);
 
 		if (isHuman) {
-			Message = "You " + result.ToString();
+            UtilityFunctions.Message = "You " + result.ToString();
 		} else {
-			Message = "The AI " + result.ToString();
+            UtilityFunctions.Message = "The AI " + result.ToString();
 		}
 
 		switch (result.Value) {
@@ -361,7 +361,7 @@ public class GameController
 	public static void AddNewState(GameState state)
 	{
 		_state.Push(state);
-		Message = "";
+        UtilityFunctions.Message = "";
 	}
 
 	/// <summary>

@@ -118,9 +118,10 @@ static class MenuController
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			int i = 0;
-			for (i = 0; i <= _menuStructure(menu).Length - 1; i++) {
-				//IsMouseOver the i'th button of the menu
-				if (IsMouseOverMenu(i, level, xOffset)) {
+            for (i = 0; i <= _menuStructure[menu].Length - 1; i++)
+            {
+                //IsMouseOver the i'th button of the menu
+                if (IsMouseOverMenu(i, level, xOffset)) {
 					PerformMenuAction(menu, i);
 					return true;
 				}
@@ -232,7 +233,7 @@ static class MenuController
 		int btnTop = MENU_TOP - (MENU_GAP + BUTTON_HEIGHT) * level;
 		int btnLeft = MENU_LEFT + BUTTON_SEP * (button + xOffset);
 
-		return UtilityDunctions.IsMouseInRectangle(btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
+		return UtilityFunctions.IsMouseInRectangle(btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
 	}
 
 	/// <summary>
