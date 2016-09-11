@@ -73,7 +73,7 @@ public class GameController
 	{
 		if (_theGame != null)
 			EndGame();
-
+		
 		//Create the game
 		_theGame = new BattleShipsGame();
 
@@ -89,13 +89,11 @@ public class GameController
 				_ai = new AIHardPlayer(_theGame);
 				break;
 		}
-
 		_human = new Player(_theGame);
 
 		//AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
 		_ai.PlayerGrid.Changed += GridChanged;
 		_theGame.AttackCompleted += AttackCompleted;
-
 		AddNewState(GameState.Deploying);
 	}
 
