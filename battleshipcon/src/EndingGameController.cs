@@ -24,7 +24,7 @@ static class EndingGameController
         UtilityFunctions.DrawSmallField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);
 
 		if (GameController.HumanPlayer.IsDestroyed) {
-			SwinGame.DrawBitmap(GameResources.GameImage("loser"), 0, SwinGame.ScreenHeight()/2-113
+			SwinGame.DrawBitmap(GameResources.GameImage("loser"), 0, SwinGame.ScreenHeight()/2-113);
 		} else {
 			SwinGame.DrawBitmap(GameResources.GameImage("winner"), 0, SwinGame.ScreenHeight()/2-113);
 		}
