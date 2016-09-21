@@ -48,6 +48,9 @@ public static class GameResources
 		//Explosions
 		NewImage("Explosion", "explosion.png");
 		NewImage("Splash", "splash.png");
+		
+		NewImage("winner", "winner_text.png");
+		NewImage("loser", "loser_text.png");
 
 	}
 	/// <summary>
