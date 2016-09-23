@@ -19,6 +19,7 @@ public static class GameResources
 		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf", 14);
+		NewFont("Army", "Top Secret.ttf", 80);
 	}
 	
 	/// <summary>
@@ -48,6 +49,9 @@ public static class GameResources
 		//Explosions
 		NewImage("Explosion", "explosion.png");
 		NewImage("Splash", "splash.png");
+		
+		NewImage("winner", "winner_text.png");
+		NewImage("loser", "loser_text.png");
 
 	}
 	/// <summary>
