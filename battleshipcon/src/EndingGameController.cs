@@ -32,6 +32,7 @@ static class EndingGameController
 		}
 	}
 
+
 	/// <summary>
 	/// Handle the input during the end of the game. Any interaction
 	/// will result in it reading in the highsSwinGame.
